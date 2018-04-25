@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
 
+const todos = [{
+  task: 'learn react',
+  isCompleted: false
+}
+{
+  task: 'make dinner',
+  isCompleted: true
+}
+
+];
 class App extends Component {
   render() {
     return (
