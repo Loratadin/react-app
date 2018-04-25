@@ -1,20 +1,17 @@
 import React, { Component } from 'react';
-import './App.css';
 
 
-class TodosList extends Component {
+class TodosListHeader extends Component {
   render() {
     return (
-      <table>
        <thead>
         <tr>
          <th>Task</th>
          <th>Action</th>
         </tr>
        </thead>
-      </table>
     );
   }
 }
 
-export default App;
+export default TodosList;
