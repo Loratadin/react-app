@@ -23,7 +23,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Hi, I'm react app!</h1>
+        <h1>One day at a time!</h1>
+        <h2>Just do it</h2>
         <TodosList todos={this.state.todos}/>
       </div>
     );
