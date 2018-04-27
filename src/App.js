@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import { TodosList } from './todos-list.js';
+import { CreateTodo } from './create-todo.js';
+
 
 const todos = [
   {
@@ -25,6 +27,7 @@ class App extends Component {
       <div className="App">
         <h1>One day at a time!</h1>
         <h2>Just do it</h2>
+        <CreateTodo />
         <TodosList todos={this.state.todos}/>
       </div>
     );

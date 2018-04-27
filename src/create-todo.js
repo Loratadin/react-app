@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export class TodosList extends Component {
+export class CreateTodo extends Component {
  
   render() {
     return (
