@@ -27,10 +27,19 @@ class App extends Component {
       <div className="App">
         <h1>One day at a time!</h1>
         <h2>Just do it</h2>
-        <CreateTodo />
-        <TodosList todos={this.state.todos}/>
+        <CreateTodo createTask={this.createTask.bind(this)}/>
+        <TodosList 
+        todos={this.state.todos}
+        />
       </div>
     );
+  }
+  createTask(task){
+this.state.todos.push({
+  task,
+  isCompleted: false
+});
+this.setSate({ todos: this.state.todos });
   }
 }
 
