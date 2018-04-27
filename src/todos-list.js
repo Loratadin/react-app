@@ -10,9 +10,9 @@ return _.map(this.props.todos, (todo, index) => <TodosListItem key={index}{...to
     return (
       <table>
        <TodosListHeader />
-       <tr>
+       <tbody>
          {this.renderItems()}
-       </tr>
+       </tbody>
       </table>
     );
   }
