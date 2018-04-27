@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import TodosList from './todos-list.js';
+import { TodosList } from './todos-list.js';
 
 const todos = [
   {
@@ -14,11 +14,17 @@ const todos = [
 
 ];
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      todos
+    };
+  }
   render() {
     return (
       <div className="App">
         <h1>Hi, I'm react app!</h1>
-        <TodosList />
+        <TodosList todos={this.state.todos}/>
       </div>
     );
   }

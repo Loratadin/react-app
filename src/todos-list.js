@@ -1,19 +1,20 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
+import { TodosListHeader } from './todos-list-header';
 
-
-class TodosList extends Component {
+export class TodosList extends Component {
+  renderItems() {
+return _.map(this.props.todos, (todo, index) => <TodosListItem key={index}{...todo}/>);
+  }
   render() {
     return (
       <table>
-       <thead>
-        <tr>
-         <th>Task</th>
-         <th>Action</th>
-        </tr>
-       </thead>
+       <TodosListHeader />
+       <tr>
+         {this.renderItems()}
+       </tr>
       </table>
     );
   }
 }
 
-export default TodosList;

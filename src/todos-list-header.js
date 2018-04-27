@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
-
-class TodosListHeader extends Component {
+export class TodosListHeader extends Component {
   render() {
     return (
        <thead>
@@ -13,5 +12,3 @@ class TodosListHeader extends Component {
     );
   }
 }
-
-export default TodosList;
