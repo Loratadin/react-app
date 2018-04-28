@@ -15,6 +15,17 @@ isEditing: false
         color: isCompleted ? 'gray' : 'blue',
         cursor: 'pointer'
     };
+
+    if(this.state.isEditing) {
+      return (
+<td>
+  <form onSubmit={this.onSaveClick.bind(this)}>
+  <input type="text" defaultValue={task} ref="editInput"
+  />
+  </form>
+</td>
+      );
+    }
     return (
       <td style={taskStyle}
           onClick={this.props.toggleTask.bind(this, task)}
@@ -47,10 +58,13 @@ isEditing: false
         </tr>
     );
   }
-  onEditClick(){
+  onEditClick() {
     this.setState({ isEditing: true});
   }
-  onCancelClick(){
+  onCancelClick() {
     this.setState({ isEditing: false});
+  }
+  onSaveClick(event) {
+
   }
 }
