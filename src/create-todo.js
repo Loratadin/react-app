@@ -42,9 +42,9 @@ this.refs.createInput.value = '';
   }
   validateInput(task) {
     if (!task){ //if there is no task entered
-      return 'Please enter a task.';
+      return 'Please enter a task';
     } else if (_.find(this.props.todos, todo => todo.task === task )) {
-    return 'I remember about this.';
+    return 'Really? I remember about this:)';
   } else {
     return null;
   }
