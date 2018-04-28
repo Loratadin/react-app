@@ -12,7 +12,7 @@ isEditing: false
     const { task, isCompleted } = this.props;
 
     const taskStyle = {
-        color: isCompleted ? 'gray' : 'blue',
+        color: isCompleted ? 'gray' : '#269ed5',
         cursor: 'pointer'
     };
 
