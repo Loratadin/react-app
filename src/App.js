@@ -39,7 +39,7 @@ this.state.todos.push({
   task,
   isCompleted: false
 });
-this.setSate({ todos: this.state.todos });
+this.setState({ todos: this.state.todos });
   }
 }
 
