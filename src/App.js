@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import _ from 'lodash';
 import { TodosList } from './todos-list.js';
 import { CreateTodo } from './create-todo.js';
 
@@ -47,6 +48,9 @@ this.state.todos.push({
   isCompleted: false
 });
 this.setState({ todos: this.state.todos });
+  }
+  saveTask(oldTask, newTask) {
+    const foundTodo=_.find(this.state.todos, todo => todo.task === oldTask)
   }
 }
 
