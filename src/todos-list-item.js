@@ -16,11 +16,11 @@ isEditing: false
         cursor: 'pointer'
     };
     return (
-<td style={taskStyle}
-onClick={this.props.toggleTask.bind( this, task )}
->
-{task}
-</td>
+      <td style={taskStyle}
+          onClick={this.props.toggleTask.bind(this, task)}
+      >
+          {task}
+      </td>
     );
   }
   renderActionSection(){
