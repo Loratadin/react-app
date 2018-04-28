@@ -8,9 +8,15 @@ export class TodosListItem extends Component {
 isEditing: false
     };
   }
-  renderTaskSection(){
-    return(
-<td>{this.props.task}</td>
+  renderTaskSection() {
+    const { task, isCompleted } = this.props;
+
+    const taskStyle = {
+        color: isCompleted ? 'green' : 'red',
+        cursor: 'pointer'
+    };
+    return (
+<td task={taskStyle}>{task}</td>
     );
   }
   renderActionSection(){
