@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import _ from 'lodash';
 
 export class CreateTodo extends Component {
  
@@ -10,11 +11,23 @@ export class CreateTodo extends Component {
       </form>
     );
   }
-  handleCreate(event){
+  handleCreate(event) {
 event.preventDefault();
+
 const createInput = this.refs.createInput;
 const task = createInput.value;
+const validateInput = this.validateInput(task);
+
 this.props.createTask(task);
 this.refs.createInput.value = '';
+  }
+  validateInput(task) {
+    if (!task){ //if there is no task entered
+      return 'Please enter a task.';
+    } else if (_.find(this.props.todos, todo => task.todo === task )) {
+    return 'I remember about this.';
+  } else {
+    return null;
+  }
   }
 }

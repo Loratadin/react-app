@@ -28,7 +28,7 @@ class App extends Component {
       <div className="App">
         <h1>One day at a time!</h1>
         <h2>Just do it</h2>
-        <CreateTodo createTask={this.createTask.bind(this)}/>
+        <CreateTodo todos={this.state.todos} createTask={this.createTask.bind(this)}/>
         <TodosList 
         todos={this.state.todos}
         toggleTask={this.toggleTask.bind(this)}
