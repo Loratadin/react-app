@@ -12,11 +12,15 @@ isEditing: false
     const { task, isCompleted } = this.props;
 
     const taskStyle = {
-        color: isCompleted ? 'green' : 'red',
+        color: isCompleted ? 'gray' : 'blue',
         cursor: 'pointer'
     };
     return (
-<td task={taskStyle}>{task}</td>
+<td style={taskStyle}
+onClick={this.props.toggleTask.bind( this, task )}
+>
+{task}
+</td>
     );
   }
   renderActionSection(){
