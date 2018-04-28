@@ -65,6 +65,11 @@ isEditing: false
     this.setState({ isEditing: false});
   }
   onSaveClick(event) {
+event.preventDefault();
 
+const oldTask = this.props.task;
+const newTask = this.refs.editInput.value;
+this.props.saveTask(oldTask, newTask);
+this.setState({ isEditing: false });
   }
 }
