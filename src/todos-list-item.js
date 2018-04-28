@@ -27,9 +27,9 @@ isEditing: false
     if(this.state.isEditing) {
       return(
         <td>
-<button>Save</button>
+          <button onClick={this.onSaveClick.bind(this)}>Save</button>
           <button onClick={this.onCancelClick.bind(this)}>Cancel</button>
-          </td>
+        </td>
       );
     }
     return(
