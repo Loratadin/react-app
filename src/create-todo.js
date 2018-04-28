@@ -13,7 +13,7 @@ export class CreateTodo extends Component {
   renderError() {
 if (!this.state.error) { return null; }
 
-return <div style={{ color: 'red'}}>{this.state.Error}</div>
+return <div style={{ color: 'red'}}>{this.state.error}</div>
   }
  
   render() {
@@ -43,7 +43,7 @@ this.refs.createInput.value = '';
   validateInput(task) {
     if (!task){ //if there is no task entered
       return 'Please enter a task.';
-    } else if (_.find(this.props.todos, todo => task.todo === task )) {
+    } else if (_.find(this.props.todos, todo => todo.task === task )) {
     return 'I remember about this.';
   } else {
     return null;
