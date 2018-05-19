@@ -7,5 +7,5 @@ import registerServiceWorker from './registerServiceWorker';
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
 
-let message = 'HELLO FROM ENTRY!!!';
+let message = ':-)WHOEVER YOU ARE, THANK YOU FOR CHECKING OUT. HAVE A WONDERFUL DAY!!!';
 console.log(message);
